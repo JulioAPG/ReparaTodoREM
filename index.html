@@ -1,0 +1,1682 @@
+<html xmlns:rem="http://rem.lsi.us.es">
+<head>
+<title>Proyecto ReparaTodoREM</title>
+<style type="text/css">
+<!--
+            body {
+                font-family: arial,verdana;
+                font-size: 10pt;
+                text-align: justify
+            }
+
+            h1 { font-size: 14pt }
+            h2 { font-size: 13pt }
+            h3 { font-size: 12pt }
+            h4 { font-size: 11pt }
+            h5 { font-size: 10pt }
+            h6 { font-size: 10pt }
+
+            h1.cover { font-size: 20pt }
+
+            tr { font-size: 10pt }
+
+            table { border: black solid; }
+            table.TOC { border: none; }
+            ul {
+                margin-top:    0pt;
+                margin-bottom: 0pt;
+                margin-left:   12pt
+            }
+        -->
+</style>
+</head>
+<body>
+<center>
+<h3>Proyecto ReparaTodoREM</h3>
+<p />
+<h1 class="cover">Documento de Requisitos del Sistema</h1>
+<p />
+<h3>Versión 1.0</h3>
+<h3>Fecha 19/09/2021</h3>
+<p />
+<h3>Preparado para:</h3>
+<a href="#ORG-0001" title="ReparaTodo">
+<p>
+ReparaTodo</p>
+</a>
+<p />
+<h3>Preparado por:</h3>
+<p><font color="red">?</font></p>
+<p />
+</center>
+<hr size="4" />
+<p />
+<h1 align="left">Índice</h1>
+<p />
+<table border="0" width="100%" class="TOC">
+<tr>
+<th align="left" valign="top">1 </th>
+<th align="left" valign="top" width="100%" colspan="3">
+<a href="#SEC-0001">
+Introducción</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">2 </th>
+<th align="left" valign="top" width="100%" colspan="3">
+<a href="#SEC-0002">
+Glosario</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">3 </th>
+<th align="left" valign="top" width="100%" colspan="3">
+<a href="#SEC-0003">
+Participantes</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">4 </th>
+<th align="left" valign="top" width="100%" colspan="3">
+<a href="#SEC-0004">
+Objetivos del sistema</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">5 </th>
+<th align="left" valign="top" width="100%" colspan="3">
+<a href="#SEC-0006">
+Requisitos del sistema</a>
+</th>
+</tr>
+<tr><td />
+<td align="left" valign="top">5.1 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0005">
+Actores</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">5.2 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0007">
+Requisitos de información</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">5.3 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0008">
+RequisitosFuncionales</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">5.4 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0009">
+Requisitos no funcionales</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">5.5 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0010">
+Diagramas de casos de uso</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">5.6 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0011">
+Especificación de requisitos</a>
+</td>
+</tr>
+</table>
+<p />
+<hr size="4" />
+<p />
+<a name="SEC-0001" />
+<h1 align="left">1 
+Introducción</h1><a name="PRG-0001" />
+<p>La gerencia del servicio técnico de electrónica ?Reparatodo? está constantemente preocupada de susprocedimientos de atención, ya que ha recibido múltiples reclamos respecto a lo lento de lareparación y la poca transparencia en ella.
+<br />Para ello, ha contratado a un grupo de expertos que le definan una forma de trabajo mucho máseficiente. Estos expertos le han recomendado la construcción de un software para la gestión delservicio que permita tanto al cliente saber qué están haciendo con su producto, como por parte delpersonal para hacer seguimiento al servicio.</p>
+<a name="SEC-0002" />
+<h1 align="left">2 
+Glosario</h1><a name="GLO-0002" />
+<p align="left">
+<b> Avería:</b>Daño, rotura o fallo que impide o perjudica el funcionamiento del mecanismo de una máquina, una red de distribución u otra cosa.</p>
+<a name="GLO-0003" />
+<p align="left">
+<b> Técnico de reparación:</b>Los técnicos en ingeniería mecánica diseñan y operan programas pensados para mantener el funcionamiento de la maquinaria, y proporcionan asesoramiento técnico</p>
+<a name="GLO-0004" />
+<p align="left">
+<b> CallCenter:</b>Un centro de llamadas o call center es o un área donde agentes, asesores, supervisores o ejecutivos, especialmente con una técnica en tele mercadeo o servicio al cliente</p>
+<a name="SEC-0003" />
+<h1 align="left">3 
+Participantes</h1><a name="ORG-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">Organización</th>
+<th align="left" valign="top" width="100%">
+ReparaTodo</th>
+</tr>
+<tr>
+<th align="left" valign="top">Dirección</th>
+<td align="left" valign="top" colspan="1">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Teléfono</th>
+<td align="left" valign="top" colspan="1">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fax</th>
+<td align="left" valign="top" colspan="1">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Empresa de reparación técnica
+<br />
+</td>
+</tr>
+</table>
+<p />
+<a name="STK-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">Participante</th>
+<th align="left" valign="top" width="100%">
+Julio Peñaloza</th>
+</tr>
+<tr><th align="left" valign="top">Organización</th>
+<td align="left" valign="top">Freelance</td>
+</tr>
+<tr>
+<th align="left" valign="top">Rol</th>
+<td align="left" valign="top" colspan="1">Gerente de proyecto</td>
+</tr>
+<tr><th align="left" valign="top" nowrap="1">Es desarrollador</th>
+<td align="left" valign="top">Sí</td>
+</tr>
+<tr><th align="left" valign="top">Es cliente</th>
+<td align="left" valign="top">No</td>
+</tr>
+<tr><th align="left" valign="top">Es usuario</th>
+<td align="left" valign="top">No</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ingeniero a cargo</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0004" />
+<h1 align="left">4 
+Objetivos del sistema</h1><a name="OBJ-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">OBJ-0001</th>
+<th align="left" valign="top" width="100%">
+Mejorar la calidad de atención</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 19/09/2021 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    El sistema deberá 
+<em>
+El sistema deberá permitir aumentar la calidad de la atención de manera progresiva gracias a la implementacion del algoritmo de organización</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Subobjetivos</th>
+<td align="left" valign="top">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="1">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="1">hay presión</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="1">en construcción</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="1">baja</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0006" />
+<h1 align="left">5 
+Requisitos del sistema</h1><a name="SEC-0005" />
+<h2 align="left">5.1 
+Actores</h2><a name="ACT-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">ACT-0001</th>
+<th align="left" valign="top" width="100%">
+Agente</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 19/09/2021 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este actor representa
+<em>Persona que toma las órdenes y realiza los cobros </em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="ACT-0002" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">ACT-0002</th>
+<th align="left" valign="top" width="100%">
+Cliente</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 19/09/2021 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este actor representa
+<em>al cliente que solicita el servicio de reparación, recibe la copia de la orden, consulta el estado de la misma y realiza el pago
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="ACT-0003" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">ACT-0003</th>
+<th align="left" valign="top" width="100%">
+Técnico</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 19/09/2021 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este actor representa
+<em>a la persona encargada de realizar el proceso de reparación, registrar las observaciones y actividades del proceso y cierra la orden</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="ACT-0004" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">ACT-0004</th>
+<th align="left" valign="top" width="100%">
+<a href="#GLO-0004" title="Un centro de llamadas o call center es o un área donde agentes, asesores, supervisores o ejecutivos, especialmente con una técnica en tele mercadeo o servicio al cliente">CallCenter</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 19/09/2021 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este actor representa
+<em>al <a href="#GLO-0004" title="Un centro de llamadas o call center es o un área donde agentes, asesores, supervisores o ejecutivos, especialmente con una técnica en tele mercadeo o servicio al cliente">callcenter</a> que se encarga de preparar la llamada y asignar un operador al azar </em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="ACT-0005" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">ACT-0005</th>
+<th align="left" valign="top" width="100%">
+Operador</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 19/09/2021 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este actor representa
+<em>al operador que realiza la llamada al cliente para informarle del cierre y cobro de la orden</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0007" />
+<h2 align="left">5.2 
+Requisitos de información</h2><a name="SEC-0008" />
+<h2 align="left">5.3 
+RequisitosFuncionales</h2><a name="FRQ-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">FRQ-0001</th>
+<th align="left" valign="top" width="100%">
+RegistrarCliente</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 19/09/2021 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    El sistema deberá 
+<em>
+Permitir al agente registrar un cliente tomando sus datos</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="1">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="1">hay presión</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="1">en construcción</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="1">baja</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="FRQ-0002" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">FRQ-0002</th>
+<th align="left" valign="top" width="100%">
+RegistrarProceso</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 19/09/2021 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    El sistema deberá 
+<em>
+permitir al técnico de registrar las  actividades y observaciones al procesar la orden</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="1">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="1">hay presión</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="1">en construcción</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="1">baja</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="FRQ-0003" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">FRQ-0003</th>
+<th align="left" valign="top" width="100%">
+ConsultarOrden</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 19/09/2021 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    El sistema deberá 
+<em>
+permitir al cliente consultar el estado de su orden
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="1">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="1">hay presión</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="1">en construcción</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="1">baja</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="FRQ-0004" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">FRQ-0004</th>
+<th align="left" valign="top" width="100%">
+RealizarLlamada</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 19/09/2021 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    El sistema deberá 
+<em>
+permitir al <a href="#GLO-0004" title="Un centro de llamadas o call center es o un área donde agentes, asesores, supervisores o ejecutivos, especialmente con una técnica en tele mercadeo o servicio al cliente">callcenter</a> preparar una llamada con toda la información referente al pago de la ordeny asignar un operador al azar</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="1">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="1">puede esperar</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="1">pendiente de validación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="1">baja</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="FRQ-0005" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">FRQ-0005</th>
+<th align="left" valign="top" width="100%">
+RealizarCobro</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 19/09/2021 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    El sistema deberá 
+<em>
+permitir al agente realizar el cobro de la orden cuando esta se cierra</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="1">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="1">hay presión</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="1">en construcción</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="1">baja</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0009" />
+<h2 align="left">5.4 
+Requisitos no funcionales</h2><a name="NFR-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">NFR-0001</th>
+<th align="left" valign="top" width="100%">
+Rendimiento</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 19/09/2021 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    El sistema deberá 
+<em>
+El sistema deberá tener un rendimiento que permita que cualquier accion del sistema no tarde mas de 5 segundos.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="1">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="1">hay presión</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="1">en construcción</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="1">baja</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0010" />
+<h2 align="left">5.5 
+Diagramas de casos de uso</h2><a name="GRF-0001" />
+<p align="center">
+<img src=".\RegistrarCliente.PNG" title=".\RegistrarCliente.PNG" />
+</p>
+<p align="center">
+<b>Figura 1</b>:
+                
+Caso de uso, registro del cliente</p>
+<a name="GRF-0002" />
+<p align="center">
+<img src=".\Proceso.PNG" title=".\Proceso.PNG" />
+</p>
+<p align="center">
+<b>Figura 2</b>:
+                
+Caso de uso, registro del proceso</p>
+<a name="GRF-0003" />
+<p align="center">
+<img src=".\Consulta.PNG" title=".\Consulta.PNG" />
+</p>
+<p align="center">
+<b>Figura 3</b>:
+                
+Caso de uso, consulta de orden</p>
+<a name="GRF-0004" />
+<p align="center">
+<img src=".\Llamada.PNG" title=".\Llamada.PNG" />
+</p>
+<p align="center">
+<b>Figura 4</b>:
+                
+Caso de uso, llamada</p>
+<a name="SEC-0011" />
+<h2 align="left">5.6 
+Especificación de requisitos</h2><a name="UC-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0001</th>
+<th align="left" valign="top" width="100%" colspan="2">
+RegistrarCliente</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 19/09/2021 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+llega un cliente con una <a href="#GLO-0002" title="Daño, rotura o fallo que impide o perjudica el funcionamiento del mecanismo de una máquina, una red de distribución u otra cosa.">avería</a>
+</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+Ninguna</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="4">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0001" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa al cliente que solicita el servicio de reparación, recibe la copia de la orden, consulta el estado de la misma y realiza el pago">
+Cliente (ACT-0002)
+    </a>
+<em>
+Llega con una <a href="#GLO-0002" title="Daño, rotura o fallo que impide o perjudica el funcionamiento del mecanismo de una máquina, una red de distribución u otra cosa.">avería</a>
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0002" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa Persona que toma las órdenes y realiza los cobros">
+Agente (ACT-0001)
+    </a>
+<em>
+registra los datos del cliente</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0003" />
+<td align="center" valign="top">3</td>
+<td>El
+     
+    sistema<em>
+entrega una copia de la orden generada al cliente</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+La orden es abierta con los datos del cliente</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+10
+veces por
+                         
+                        segundo(s)</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">hay presión</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">pendiente de validación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">baja</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0002" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0002</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Proceso</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 19/09/2021 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+El técnico toma la orden</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+La orden está generada</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="6">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0004" />
+<td align="center" valign="top">1</td>
+<td>Si<em>
+La orden está generada,
+                                </em>el actor<a href="#ACT-0003" title="Este actor representa a la persona encargada de realizar el proceso de reparación, registrar las observaciones y actividades del proceso y cierra la orden">
+Técnico (ACT-0003)
+    </a>
+<em>
+ toma la orden</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0006" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona encargada de realizar el proceso de reparación, registrar las observaciones y actividades del proceso y cierra la orden">
+Técnico (ACT-0003)
+    </a>
+<em>
+registra las actividades y observaciones</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0007" />
+<td align="center" valign="top">3</td>
+<td>El actor<a href="#ACT-0003" title="Este actor representa a la persona encargada de realizar el proceso de reparación, registrar las observaciones y actividades del proceso y cierra la orden">
+Técnico (ACT-0003)
+    </a>
+<em>
+cierra la orden al terminar el proceso</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0008" />
+<td align="center" valign="top">4</td>
+<td>Si<em>
+La orden está cerrada,
+                                </em>el actor<a href="#ACT-0001" title="Este actor representa Persona que toma las órdenes y realiza los cobros">
+Agente (ACT-0001)
+    </a>
+<em>
+realiza el cobro por la orden</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0009" />
+<td align="center" valign="top">5</td>
+<td>Si<em>
+La orden está cerrada,
+                                </em>el
+     
+    sistema<em>
+envía un email al <a href="#GLO-0004" title="Un centro de llamadas o call center es o un área donde agentes, asesores, supervisores o ejecutivos, especialmente con una técnica en tele mercadeo o servicio al cliente">callcenter</a>
+</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+La orden se cierra y se envía un mail al <a href="#GLO-0004" title="Un centro de llamadas o call center es o un área donde agentes, asesores, supervisores o ejecutivos, especialmente con una técnica en tele mercadeo o servicio al cliente">callcenter</a>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+10
+veces por
+                         
+                        hora(s)</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">hay presión</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">pendiente de validación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">baja</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0003" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0003</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Consulta</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 19/09/2021 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso abstracto durante la realización de los siguientes casos de uso: 
+<font color="red">?</font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+La orden está en el sistema (ya sea abierta, cerrada, en proceso)</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="4">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0010" />
+<td align="center" valign="top">1</td>
+<td>Si<em>
+La orden existe en el sistema,
+                                </em>el actor<a href="#ACT-0002" title="Este actor representa al cliente que solicita el servicio de reparación, recibe la copia de la orden, consulta el estado de la misma y realiza el pago">
+Cliente (ACT-0002)
+    </a>
+<em>
+ingresa el número de la orden a consultar
+<br />
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0011" />
+<td align="center" valign="top">2</td>
+<td>El
+     
+    sistema<em>
+consulta el estado de la orden </em>
+</td>
+</tr>
+<tr>
+<a name="STP-0012" />
+<td align="center" valign="top">3</td>
+<td>El
+     
+    sistema<em>
+ le envía la información de la orden al cliente</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+Se envía la información de la orden al cliente</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+10
+veces por
+                         
+                        segundo(s)</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">hay presión</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">pendiente de validación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">baja</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0004" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0004</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Llamada</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 19/09/2021 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Julio Peñaloza</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+La orden es cerrada por el técnico</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+La orden está cerrada</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="5">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0013" />
+<td align="center" valign="top">1</td>
+<td>Si<em>
+la orden está cerrada,
+                                </em>el actor<a href="#ACT-0004" title="Este actor representa al callcenter que se encarga de preparar la llamada y asignar un operador al azar"> CallCenter (ACT-0004)
+    </a>
+<em>
+recibe el mail del sistema</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0014" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0004" title="Este actor representa al callcenter que se encarga de preparar la llamada y asignar un operador al azar"> CallCenter (ACT-0004)
+    </a>
+<em>
+prepara la llamada con la información referente a la orden</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0015" />
+<td align="center" valign="top">3</td>
+<td>El
+     
+    sistema<em>
+asigna un operador al azar para realizar la llamada</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0016" />
+<td align="center" valign="top">4</td>
+<td>El actor<a href="#ACT-0005" title="Este actor representa al operador que realiza la llamada al cliente para informarle del cierre y cobro de la orden">
+Operador (ACT-0005)
+    </a>
+<em>
+realiza la llamada al cliente</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+Un operador realiza la llamada</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">puede esperar</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">pendiente de validación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">baja</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+</body>
+</html>
